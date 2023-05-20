@@ -10,7 +10,7 @@ function App() {
     <Routes>
       <Route path='/' element={<UserData/>}/>
       <Route path='/comments/:id' element={<Coments/>}/>
-      
+      <Route path='*' element={<UserData/>}/>
     </Routes>
    
     </div>

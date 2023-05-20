@@ -50,8 +50,7 @@ const UserData = () => {
                   
                   <tr onClick={()=>navigate(`/comments/${elem.id}/`)} key={idx}>
                   
-                  <td>{elem.id}</td>
-                  
+                    <td>{elem.id}</td>
                     <td>{elem.userId}</td>
                     <td>{elem.title}</td>
                     
