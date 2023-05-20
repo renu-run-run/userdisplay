@@ -7,7 +7,7 @@ const Coments = () => {
     const [data, setData] = useState([])
     
     useEffect(()=>{
-       axios.get("https://jsonplaceholder.typicode.com/posts/1/comments").then((res)=>{
+       axios.get(`https://jsonplaceholder.typicode.com/posts/${id}/comments`).then((res)=>{
         console.log(res.data)
         setData(res.data);
        })

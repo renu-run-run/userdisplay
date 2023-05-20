@@ -9,10 +9,10 @@ function App() {
     <div className="App">
     <Routes>
       <Route path='/' element={<UserData/>}/>
-      <Route path='/comemts/:id' element={<Coments/>}/>
-      <Route path='*' element={<UserData/>}/>
+      <Route path='/comments/:id' element={<Coments/>}/>
+      
     </Routes>
-   <Coments/>
+   
     </div>
   );
 }

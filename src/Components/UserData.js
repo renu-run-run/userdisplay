@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const UserData = () => {
     const [userData, setUserData] = useState([]);
     const [search, setSearch] = useState([]);
     const [page, setPage] = useState(2);
-
+    const navigate = useNavigate();
     useEffect(()=>{
         axios.get('https://jsonplaceholder.typicode.com/posts?_start=0&_end=100').then(
            (response)=>{
@@ -47,14 +47,16 @@ const UserData = () => {
             }
           }).map((elem,idx) => {
                 return(
-                  <tr key={idx}>
-                 <Link to={`/post/${elem.id}/coments`}>
-                 <td>{elem.id}</td>
-                 </Link>
+                  
+                  <tr onClick={()=>navigate(`/comments/${elem.id}/`)} key={idx}>
+                  
+                  <td>{elem.id}</td>
+                  
                     <td>{elem.userId}</td>
                     <td>{elem.title}</td>
                     
                   </tr>
+                  
                 )
                 
             })
