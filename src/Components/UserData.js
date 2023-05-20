@@ -7,7 +7,7 @@ const UserData = () => {
     const [page, setPage] = useState(2);
 
     useEffect(()=>{
-        axios.get('http://jsonplaceholder.typicode.com/posts?_start=0&_end=100').then(
+        axios.get('https://jsonplaceholder.typicode.com/posts?_start=0&_end=100').then(
            (response)=>{
             setUserData(response.data);
             console.log(response.data)
